@@ -1,0 +1,89 @@
+name: Add a Community
+description: Submit an NLP community or organization for African languages
+title: "[Community] "
+labels: ["submission"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Community / Organization Name
+      description: The name of the community, organization, or lab.
+      placeholder: "e.g. GhanaNLP"
+    validations:
+      required: true
+
+  - type: input
+    id: github
+    attributes:
+      label: GitHub URL
+      description: Link to the GitHub organization or main repository.
+      placeholder: "e.g. https://github.com/GhanaNLP"
+    validations:
+      required: false
+
+  - type: input
+    id: website
+    attributes:
+      label: Website
+      description: Link to the community website, if any.
+      placeholder: "e.g. https://ghananlp.org"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: region
+    attributes:
+      label: Region
+      description: Which region of Africa is this community primarily based in or focused on?
+      options:
+        - Pan-African
+        - West Africa
+        - East Africa
+        - North Africa
+        - Southern Africa
+        - Central Africa
+    validations:
+      required: true
+
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      description: Primary country (use "Multiple" if pan-African).
+      placeholder: "e.g. Ghana"
+    validations:
+      required: true
+
+  - type: textarea
+    id: languages
+    attributes:
+      label: Languages
+      description: List the African languages this community works with (one per line or comma-separated).
+      placeholder: |
+        Twi
+        Ewe
+        Ga
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of what the community does (1-2 sentences).
+      placeholder: "e.g. Open-source NLP for Ghanaian languages. Built Khaya translator and ABENA language model."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity
+    attributes:
+      label: Activity Level
+      description: How active is this community?
+      options:
+        - Very active (regular commits, multiple repos, ongoing projects)
+        - Active (some recent activity, has repos)
+        - New (recently created, early stage)
+        - Inactive / Archived
+    validations:
+      required: true
